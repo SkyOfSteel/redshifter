@@ -21,7 +21,7 @@ parser.add_argument("table", help="Table in schema.table format")
 args = parser.parse_args()
 
 table_name = quote_identifier(args.table)
-QUERY = f'SELECT * FROM NATIVE_DB.{table_name};'
+QUERY = f'SELECT * FROM "{NATIVE_DB}".{table_name} LIMIT 50;'
 
 session = boto3.Session(profile_name=PROFILE)
 client = session.client("redshift-data", region_name=REGION)
