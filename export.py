@@ -60,3 +60,9 @@ df = pd.DataFrame(rows, columns=columns)
 df.to_csv("output.csv", index=False)
 
 print("CSV exported!")
+
+
+# df = pd.DataFrame(rows, columns=columns)
+# filename = args.table.replace(".", "_") + ".csv"
+# df.to_csv(filename, index=False)
+# print(f"CSV exported to {filename}!")
